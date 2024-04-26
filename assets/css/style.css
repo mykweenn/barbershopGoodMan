@@ -864,7 +864,7 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
 
 
 
-@media (min-width: 575px) {
+@media (min-width: 300px) {
 
 
   :root {
@@ -874,6 +874,10 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
 
   }
 
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 
 
   /**
@@ -1044,7 +1048,9 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
 
   }
 
-
+  body {
+    overflow-x: hidden;
+  }
 
   /**
    * REUSED STYLE
