@@ -673,14 +673,14 @@
 
                   <select name="category" class="input-field">
                     <option value="Select category">Выбор услуги</option>
-                    <option value="Shaving & Facial">Оформление бороды</option>
-                    <option value="Hair">Стрижка</option>
+                    <option value="Оформление бороды">Оформление бороды</option>
+                    <option value="Стрижка">Стрижка</option>
                   </select>
                 </div>
 
                 <input type="date" name="date" required class="input-field date">
 
-                <textarea name="message" placeholder="Напишите сообщение" required class="input-field"></textarea>
+                <textarea name="message" placeholder="Напишите сообщение" class="input-field"></textarea>
 
                 <button type="submit" class="form-btn">
                   <span class="span">Записаться сейчас</span>
@@ -693,7 +693,7 @@
             </div>
 
             <script>
-              const scriptURL = 'https://script.google.com/macros/s/AKfycbx1Od3RnlbK8bKrCtV5No2ZEdwp5XhiovyzgdSRGDWbsKrctjnHn-CDs4_n9_N-3O9k-w/exec'
+              const scriptURL = 'https://script.google.com/macros/s/AKfycbzt8kXM-UojZcTSNmjcOCC-dr3Xj4iWdC0cDsu7almEtmAquMUjIOimq7Kwd7Dv5LnmZw/exec'
               const form = document.forms['submit-to-google-sheet']
             
               form.addEventListener('submit', e => {
