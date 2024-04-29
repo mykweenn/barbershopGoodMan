@@ -674,6 +674,7 @@ textarea.input-field {
 .form-btn:is(:hover, :focus) {
   background-color: var(--white);
   color: var(--eerie-black-1);
+  transform: scale(1.1);
 }
 
 

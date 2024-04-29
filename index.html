@@ -660,12 +660,12 @@
                 Пожалуйста заполните форму ниже для записи
               </p>
 
-              <form action="" class="appoin-form">
+              <form action="" class="appoin-form" name="submit-to-google-sheet">
 
                 <div class="input-wrapper">
                   <input type="text" name="name" placeholder="Имя и фамилия" required class="input-field">
 
-                  <input type="email" name="email_address" placeholder="Электронная почта" required class="input-field">
+                  <input type="text" name="tg-id" placeholder="Электронная почта" required class="input-field">
                 </div>
 
                 <div class="input-wrapper">
@@ -691,6 +691,18 @@
               </form>
 
             </div>
+
+            <script>
+              const scriptURL = 'https://script.google.com/macros/s/AKfycbx1Od3RnlbK8bKrCtV5No2ZEdwp5XhiovyzgdSRGDWbsKrctjnHn-CDs4_n9_N-3O9k-w/exec'
+              const form = document.forms['submit-to-google-sheet']
+            
+              form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                  .then(response => console.log('Success!', response))
+                  .catch(error => console.error('Error!', error.message))
+              })
+            </script>
 
             <figure class="card-banner img-holder" style="--width: 250; --height: 774;">
               <img src="./assets/images/appoin-banner-2.jpg" width="250" height="774" loading="lazy" alt=""
