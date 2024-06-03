@@ -1008,12 +1008,10 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
 
   .footer .btn {
     position: absolute;
-    top: 104px;
-    right: 87px;
-    bottom: 28px;
-    width: 50%;
-    height: 50%;
-  
+    top: 15px;
+    right: 15px;
+    bottom: 15px;
+    width: max-content;
   }
 
   .footer-link-box { grid-template-columns: 1fr 1fr; }
