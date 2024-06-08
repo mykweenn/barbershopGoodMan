@@ -8,8 +8,8 @@
   --rich-black-fogra-39_50: hsla(0, 0%, 5%, 0.5);
   --rich-black-fogra-39: hsl(0, 0%, 5%);
   --indian-yellow_10: hsla(36, 61%, 58%, 0.1);
-  --indian-yellow: hsl(0, 61%, 58%);
-  --harvest-gold: hsl(0, 66%, 53%);
+  --indian-yellow: hsl(214, 61%, 58%);
+  --harvest-gold: hsl(224, 79%, 52%);
   --eerie-black-1: hsl(0, 0%, 14%);
   --eerie-black-2: hsl(0, 0%, 12%);
   --eerie-black-2_85: hsla(0, 0%, 12%, 0.85);
@@ -224,12 +224,21 @@ body {
 
 .btn:is(:hover, :focus)::before { transform: skewY(-15deg) scaleY(2.5); }
 
+.btn_appointment {
+  background-color: whitesmoke; 
+  color: darkslategray;
+  text-align: center;
+}
+
 .text-center { text-align: center; }
 
 .grid-list {
   display: grid;
   gap: 30px;
 }
+
+
+
 
 .img-holder {
   aspect-ratio: var(--width) / var(--height);
@@ -282,7 +291,7 @@ body {
 
 .header-bottom {
   position: absolute;
-  top: 45px;
+  top: 60px;
   left: 0;
   width: 100%;
   padding-block: 10px;
@@ -313,9 +322,10 @@ body {
   font-family: var(--ff-oswald);
   font-size: 2.7rem;
   font-weight: var(--fw-600);
-  text-transform: uppercase;
+  
   line-height: 1.4;
 }
+
 
 .logo .span {
   color: var(--white);
@@ -408,6 +418,7 @@ body {
   padding: 60px 25px;
   box-shadow: var(--shadow-1);
   border-radius: var(--radius-8);
+  height: 600px;
 }
 
 .service-card .card-icon {
@@ -677,7 +688,10 @@ textarea.input-field {
   transform: scale(1.1);
 }
 
-
+.Top__ctaButtonWrap {
+  background-color:aliceblue;   
+  
+}
 
 
 
@@ -766,6 +780,11 @@ textarea.input-field {
 .footer-link:is(:hover, :focus) { color: var(--white); }
 
 .footer-link:is(:hover, :focus)::before { background-color: var(--white); }
+
+.footer_map {
+  width: 500px;
+  height: 400px;
+}
 
 .blog-card {
   gap: 25px;
@@ -938,8 +957,9 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
 
   .logo { font-size: 3rem; }
 
-  .logo .span { font-size: 1.4rem; }
+  .logo .span { font-size: 1.9rem; }
 
+  
 
 
   /**
@@ -950,6 +970,7 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
 
   .hero-text { font-size: var(--fs-18); }
 
+  .hero-subtext {font-size: var(--fs-18); margin-bottom: 30px;}
 
 
   /**
@@ -966,13 +987,18 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
   .pricing-card {
     flex-wrap: nowrap;
     align-items: center;
-    gap: 30px;
+    gap: 10px;
+    
+  }
+
+  .pricing-card .card-title {
+    align-self:center;
   }
 
   .pricing-card .wrapper { order: 0; }
 
   .pricing-card .card-price {
-    align-self: flex-start;
+    align-self: center;
     line-height: 1.6;
   }
   
@@ -1021,6 +1047,10 @@ a.contact-link:is(:hover, :focus) { color: var(--white); }
   .blog-card .card-title {
     --fs-14: 1.7rem;
     max-width: 25ch;
+  }
+
+  .footer_map {
+    width: 100%;
   }
 
 }
